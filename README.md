@@ -1,4 +1,4 @@
-# Market_prediction
+# Drift-Aware Forecasting for Unstable Commodity Markets
 
 This project implements a prototype forecasting pipeline designed for volatile commodity markets, using Ethiopia-inspired market conditions as the motivating environment. Traditional forecasting approaches often assume stable statistical relationships over time, but real markets—especially in developing economies—frequently experience structural breaks, supply shocks, currency fluctuations, and seasonal disruptions.
 
