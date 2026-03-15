@@ -1,6 +1,5 @@
 # Drift-Aware Forecasting for Unstable Commodity Markets
 
-## Overview
 This prototype implements a forecasting pipeline specifically designed for highly volatile commodity markets, inspired by Ethiopian economic conditions. Traditional time series forecasting models typically assume underlying market stability. However, in emerging markets facing structural shocks (such as currency devaluation, drought, or socio-political events), these assumptions fail.
 
 This project demonstrates the impact of **structural drift** on static forecasting models and provides an **adaptive modeling strategy** that automatically detects volatility and retrains the model in real-time.
