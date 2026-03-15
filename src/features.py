@@ -34,14 +34,17 @@ def add_calendar_features(df, date_col='date'):
 
 def encode_categorical_features(df):
     """
-    One-hot encode categorical variables.
+    One-hot encode categorical variables but keep the original for tracking.
     """
-    df = pd.get_dummies(df, columns=['region'], drop_first=False)
+    df_encoded = pd.get_dummies(df, columns=['region'], drop_first=False)
+    # Restore the original region column for grouping/evaluation later
+    df_encoded['region'] = df['region']
+    
     # Convert booleans to int if needed by standard scikit models
-    for col in df.columns:
-        if df[col].dtype == 'bool':
-            df[col] = df[col].astype(int)
-    return df
+    for col in df_encoded.columns:
+        if df_encoded[col].dtype == 'bool':
+            df_encoded[col] = df_encoded[col].astype(int)
+    return df_encoded
 
 def generate_features(df):
     """
